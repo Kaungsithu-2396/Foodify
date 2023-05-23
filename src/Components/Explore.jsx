@@ -5,11 +5,10 @@ import FoodListCarousel from "./Explore/FoodListCarousel";
 export default function Explore() {
     return (
         <>
-            <div className="bg-gray-800 h-screen ">
+            <div className="bg-gray-800 ">
                 <div className=" w-11/12 py-5 m-auto ">
                     <CuisineAsFlag />
                     <SearchEl />
-                    <FoodListCarousel />
                     <FoodListCarousel />
                 </div>
             </div>

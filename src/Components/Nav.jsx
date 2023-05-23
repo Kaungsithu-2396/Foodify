@@ -23,7 +23,7 @@ export default function Nav() {
                             <CiMenuFries />
                         </div>
                         <div className="cursor-pointer">
-                            <h1 className="font-black lg:text-5xl text-white  text-3xl flex justify-center">
+                            <h1 className="font-black lg:text-5txl text-white  text-3xl flex justify-center">
                                 <BiSearchAlt />
                                 <span className=" text-yellow-500 "> Food</span>
                                 <span className="text-white">ify</span>
