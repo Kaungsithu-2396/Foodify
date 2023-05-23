@@ -12,6 +12,7 @@ body {
 }
 .home__section {
     background-image: url(img/Foodify.jpg);
+
     /* opacity: 2%; */
 }
 .active {

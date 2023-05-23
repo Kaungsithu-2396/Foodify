@@ -13,13 +13,14 @@ const router = createBrowserRouter(
         <Route path="/" element={<Nav />}>
             <Route index element={<Results />} />
             <Route path="/explore" element={<Explore />} />
+            
         </Route>
     )
 );
 export default function AppContainer() {
     return (
         <RouterProvider router={router}>
-            <div className="h-screen overflow-hidden"></div>
+          {/* >  <div className="h-screen overflow-hidden"></div */}
         </RouterProvider>
     );
 }
