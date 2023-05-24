@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import CuisineAsFlag from "./Explore/CuisineAsFlag";
 import SearchEl from "./Search";
-import FoodListCarousel from "./Explore/FoodListCarousel";
+
 export default function Explore() {
     return (
         <>
@@ -9,7 +9,6 @@ export default function Explore() {
                 <div className=" w-11/12 py-5 m-auto ">
                     <CuisineAsFlag />
                     <SearchEl />
-                    <FoodListCarousel />
                 </div>
             </div>
         </>

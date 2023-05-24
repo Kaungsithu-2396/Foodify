@@ -8,6 +8,7 @@
 }
 body {
     font-family: "Josefin Sans", sans-serif;
+    background-color: rgb(31 41 55);
     /* background-color: #f7ede7; */
 }
 .home__section {
@@ -49,4 +50,7 @@ body {
 }
 .slick-dots li button:before {
     color: #fff !important;
+}
+.maxWidth {
+    width: max-content;
 }

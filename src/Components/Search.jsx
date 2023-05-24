@@ -1,19 +1,42 @@
-import React from "react";
-
+import React, { useState } from "react";
+import SearchElement from "./Explore/SearchEl";
+import PicksContainer from "./Explore/PicksContainer";
 export default function SearchEl() {
+    const [show, setShow] = useState(true);
+    const [data, setData] = useState("");
+    const handleChange = (e) => {
+        setData(e.target.value);
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShow(false);
+    };
+    const CarouselComponent = () => {
+        return (
+            <>
+                <PicksContainer diet={"vegetarian"} type={"diet"} />
+                <PicksContainer diet={"ketogenic"} type={"diet"} />
+            </>
+        );
+    };
     return (
         <div className=" my-5">
-            <form action="" className=" flex justify-center relative">
+            <form
+                action=""
+                onSubmit={handleSubmit}
+                className=" flex justify-center relative"
+            >
                 <input
                     type="text"
                     className=" md:px-8 md:py-6 px-6 py-4 outline-none  rounded-md  w-[40rem] md:w-full lg:w-[50rem] text-xl text-black relative bg-[#E5E5E5] "
                     placeholder="&#x1F50D;  (e.g Chicken)..."
+                    onChange={handleChange}
                     required
                 />
-                {/* <button className="border text-black rounded px-3 py-2 md:px-5 md:py-3 bg-yellow-500 mx-3 hover:scale-105 hover:text-white duration-200 delay-200">
-                    Submit
-                </button> */}
             </form>
+            <div className="">
+                {show ? <CarouselComponent /> : <SearchElement data={data} />}
+            </div>
         </div>
     );
 }

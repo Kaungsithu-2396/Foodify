@@ -1,7 +1,6 @@
 import React from "react";
-import Nav from "./Nav";
-import Results from "./Results";
-
+import Nav from "./HomeSection/Nav";
+import Results from "./HomeSection/Results";
 
 import {
     createBrowserRouter,
@@ -12,12 +11,16 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Explore from "./Explore";
+import Cuisine from "./Explore/Cuisine";
+import Detail from "./Detail/Detail";
 const query = new QueryClient();
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Nav />}>
             <Route index element={<Results />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path="/cuisine/:name" element={<Cuisine />} />
+            <Route path="detail/:id" element={<Detail />} />
         </Route>
     )
 );

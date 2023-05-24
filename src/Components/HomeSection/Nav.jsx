@@ -3,8 +3,9 @@ import { AiFillGithub } from "react-icons/ai";
 import { BiSearchAlt } from "react-icons/bi";
 import { CiMenuFries } from "react-icons/ci";
 import List from "./List";
-
+import { Link, NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { RxCross1 } from "react-icons/rx";
 
 export default function Nav() {
     let [toggle, setToggle] = useState(false);
@@ -48,8 +49,28 @@ export default function Nav() {
             </div>
 
             {toggle && (
-                <div className="absolute top-0 bg-red-500 h-screen w-[50%] text-white  transistion-all duration-200 delay-300">
-                    <h1 className="cursor-pointer">minglar par</h1>
+                <div className="absolute top-0 bg-slate-800/70 h-screen w-[50%] text-white  transistion-all duration-200 delay-300">
+                    <div
+                        className="absolute right-2 top-4"
+                        onClick={() => setToggle(false)}
+                    >
+                        <RxCross1 />
+                    </div>
+                    <ul className=" flex justify-center flex-col gap-y-5  items-center  h-[50%]">
+                        <li>
+                            <NavLink to="/">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/explore">Explore</NavLink>
+                        </li>
+                        <li className="  ">
+                            <div className="">
+                                <NavLink to="https://github.com/Kaungsithu-123/Foodify">
+                                    <AiFillGithub />
+                                </NavLink>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             )}
         </>
