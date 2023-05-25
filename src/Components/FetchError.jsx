@@ -2,8 +2,10 @@ import React from "react";
 
 export default function FetchError() {
     return (
-        <div className="px-5 py-3 bg-red-500 text-white flex justify-center items-center text-xl  md:text-4xl">
-            Come back later Buddy! <br />
-        </div>
+        <>
+            <div className="text-3xl text-red-500  w-3/4 m-auto my-5">
+                <h1>Error Encounter due to API limited Access</h1>
+            </div>
+        </>
     );
 }

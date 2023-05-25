@@ -21,13 +21,14 @@ export default function SearchResult() {
                 Result of '{dish}'
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-2/3 m-auto lg:grid-cols-3">
                 {isLoading && <Loader />}
                 {el?.map((item) => {
                     return (
                         <FoodCard
                             src={item.image}
                             key={item.id}
+                            id={item.id}
                             title={item.title}
                         />
                     );

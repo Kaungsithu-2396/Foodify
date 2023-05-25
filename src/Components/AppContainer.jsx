@@ -9,11 +9,12 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Explore from "./Explore";
 import Cuisine from "./Explore/Cuisine";
 import Detail from "./Detail/Detail";
 import SearchResult from "./SearchResults/SearchResult";
+
 const query = new QueryClient();
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -32,7 +33,7 @@ export default function AppContainer() {
             <RouterProvider router={router}>
                 {/* >  <div className="h-screen overflow-hidden"></div */}
             </RouterProvider>
-            <ReactQueryDevtools initialIsOpen={false} />
+            {/* <ReactQueryDevtools initialIsOpen={false} /> */}
         </QueryClientProvider>
     );
 }
