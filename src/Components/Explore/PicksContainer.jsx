@@ -3,7 +3,7 @@ import useFetch from "../Hooks/useFetch";
 import TemplateCarousel from "../Carousel/TemplateCarousel";
 import FetchError from "../FetchError";
 export default function PicksContainer({ diet, type }) {
-    const { data, isLoading, isError } = useFetch(diet, type);
+    const { data, isLoading, isError } = useFetch(diet, type,true);
     return (
         <>
             <div className=" my-16">

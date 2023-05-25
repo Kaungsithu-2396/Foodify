@@ -13,6 +13,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Explore from "./Explore";
 import Cuisine from "./Explore/Cuisine";
 import Detail from "./Detail/Detail";
+import SearchResult from "./SearchResults/SearchResult";
 const query = new QueryClient();
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
             <Route index element={<Results />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/cuisine/:name" element={<Cuisine />} />
+            <Route path="/searchResult/:dish" element={<SearchResult />} />
             <Route path="detail/:id" element={<Detail />} />
         </Route>
     )

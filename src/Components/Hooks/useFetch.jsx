@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
-export default function useFetch(item, type, enabled = false) {
+export default function useFetch(item, type) {
     const onError = (err) => {
         return <h1>{err}</h1>;
     };
@@ -17,11 +17,11 @@ export default function useFetch(item, type, enabled = false) {
         queryKey: [item],
         queryFn: () => fetchData(),
         onError,
-        enabled,
+        enabled: true,
         select: (data) => {
             return data.results;
         },
-        staleTime: 50000,
     });
+
     return { data, isLoading, isError };
 }

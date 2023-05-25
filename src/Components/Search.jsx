@@ -1,26 +1,21 @@
 import React, { useState } from "react";
-import SearchElement from "./Explore/SearchEl";
-import PicksContainer from "./Explore/PicksContainer";
+
+import { useNavigate } from "react-router-dom";
+import debounce from "lodash.debounce";
+
 export default function SearchEl() {
-    const [enabled, setEnabled] = useState(false);
-    const [show, setShow] = useState(true);
+    const navigate = useNavigate();
     const [data, setData] = useState("");
+
     const handleChange = (e) => {
         setData(e.target.value);
     };
+    const debounceOnChangeHandler = debounce(handleChange, 3000);
     const handleSubmit = (e) => {
         e.preventDefault();
-        setShow(false);
-        setEnabled(true);
+        navigate("/searchResult/" + data);
     };
-    const CarouselComponent = () => {
-        return (
-            <>
-                <PicksContainer diet={"vegetarian"} type={"diet"} />
-                <PicksContainer diet={"ketogenic"} type={"diet"} />
-            </>
-        );
-    };
+
     return (
         <div className=" my-5">
             <form
@@ -36,13 +31,6 @@ export default function SearchEl() {
                     required
                 />
             </form>
-            <div className="">
-                {show ? (
-                    <CarouselComponent />
-                ) : (
-                    <SearchElement data={data} enabled={enabled} />
-                )}
-            </div>
         </div>
     );
 }

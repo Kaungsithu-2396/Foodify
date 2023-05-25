@@ -35,13 +35,15 @@ export default function Nav() {
                             <List title={"Explore"} to={"/explore"} />
                         </div>
                         <div className="repo__  hidden md:block       cursor-pointer   hover:scale-105 hover:text-yellow-500  transistion-all duration-300 delay-200 rounded border-black">
-                            <h1 className="flex justify-center items-center gap-1 md:gap-2  text-xl md:text-3xl p-2  md:px-2 md:py-4">
-                                {" "}
-                                <span>
+                            <NavLink to="https://github.com/Kaungsithu-123/Foodify">
+                                <h1 className="flex justify-center items-center gap-1 md:gap-2  text-xl md:text-3xl p-2  md:px-2 md:py-4">
+                                    {" "}
                                     <AiFillGithub />
-                                </span>
-                                <span className="hidden lg:block">GitHub</span>
-                            </h1>
+                                    <span className="hidden lg:block">
+                                        GitHub
+                                    </span>
+                                </h1>
+                            </NavLink>
                         </div>
                     </nav>
                 </div>
@@ -63,12 +65,10 @@ export default function Nav() {
                         <li>
                             <NavLink to="/explore">Explore</NavLink>
                         </li>
-                        <li className="  ">
-                            <div className="">
-                                <NavLink to="https://github.com/Kaungsithu-123/Foodify">
-                                    <AiFillGithub />
-                                </NavLink>
-                            </div>
+                        <li className="">
+                            <NavLink to="/https://github.com/Kaungsithu-123/Foodify">
+                                <AiFillGithub />
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

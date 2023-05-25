@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CuisineAsFlag from "./Explore/CuisineAsFlag";
 import SearchEl from "./Search";
-
+import PicksContainer from "./Explore/PicksContainer";
 export default function Explore() {
     return (
         <>
@@ -9,6 +9,8 @@ export default function Explore() {
                 <div className=" w-11/12 py-5 m-auto ">
                     <CuisineAsFlag />
                     <SearchEl />
+                    <PicksContainer diet={"vegetarian"} type={"diet"} />
+                    <PicksContainer diet={"ketogenic"} type={"diet"} />
                 </div>
             </div>
         </>
