@@ -24,13 +24,14 @@ export default function TemplateCarousel({ data }) {
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 961,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     initialSlide: 2,
                 },
             },
+
             {
                 breakpoint: 480,
                 settings: {
