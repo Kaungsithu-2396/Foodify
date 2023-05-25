@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Results() {
     return (
         <>
@@ -18,9 +18,11 @@ export default function Results() {
                         </h1>
                         <br />
                         <div className="">
-                            <button className="px-5 py-3 rounded-md bg-yellow-500 text-black hover:scale-110 hover:text-white transistion-all duration-300 delay-100">
-                                Get Started
-                            </button>
+                            <Link to="/explore">
+                                <button className="px-5 py-3 rounded-md bg-yellow-500 text-black hover:scale-110 hover:text-white transistion-all duration-300 delay-100">
+                                    Get Started
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
