@@ -5,7 +5,7 @@ export default function CuisineAsFlag() {
         <div>
             <div className="">
                 <h1 className="text-3xl">Popular Cuisines</h1>
-                <div className="flex justify-start  gap-4 mt-4 md:w-[60%]  lg:w-[30%] flex-wrap ">
+                <div className="flex justify-start  gap-4 mt-4 md:w-[60%] lg:w-[30%] max-lg:w-[35%] flex-wrap ">
                     <CuisineTab title={"Italian"} to={"italian"} />
                     <CuisineTab title={"African"} to={"african"} />
                     <CuisineTab title={"French"} to={"french"} />

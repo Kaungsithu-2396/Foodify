@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 export default function Results() {
     return (
         <>
@@ -26,6 +27,7 @@ export default function Results() {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         </>
     );

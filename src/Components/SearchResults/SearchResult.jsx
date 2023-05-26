@@ -4,6 +4,7 @@ import CuisineAsFlag from "../Explore/CuisineAsFlag";
 import useFetch from "../Hooks/useFetch";
 import Loader from "../Loader";
 import FoodCard from "../Explore/FoodCard";
+import Footer from "../Footer";
 export default function SearchResult() {
     const { dish } = useParams();
     const {
@@ -34,6 +35,7 @@ export default function SearchResult() {
                     );
                 })}
             </div>
+            <Footer />
         </div>
     );
 }

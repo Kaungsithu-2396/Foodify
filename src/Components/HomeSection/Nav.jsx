@@ -14,7 +14,7 @@ export default function Nav() {
     };
     return (
         <>
-            <div className=" text-white h-screen   ">
+            <div className=" text-white    ">
                 <div className="bg-gray-900">
                     <nav className=" w-4/5  md:w-[90%] flex justify-between  items-center m-auto    py-6">
                         <div

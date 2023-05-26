@@ -17,7 +17,7 @@ export default function SearchEl() {
     };
 
     return (
-        <div className=" my-5">
+        <div className=" md:my-5 mt-9 ">
             <form
                 action=""
                 onSubmit={handleSubmit}
