@@ -22,7 +22,7 @@ export default function SearchResult() {
                 Result of '{dish}'
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 w-2/3 m-auto lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2  w-3/4 m-auto md:w-2/3  lg:grid-cols-3">
                 {isLoading && <Loader />}
                 {el?.map((item) => {
                     return (
@@ -35,7 +35,6 @@ export default function SearchResult() {
                     );
                 })}
             </div>
-            <Footer />
         </div>
     );
 }

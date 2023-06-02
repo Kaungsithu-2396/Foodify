@@ -14,7 +14,6 @@ export default function Explore() {
                     <PicksContainer diet={"ketogenic"} type={"diet"} />
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

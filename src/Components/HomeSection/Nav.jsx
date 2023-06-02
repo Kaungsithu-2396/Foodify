@@ -66,7 +66,7 @@ export default function Nav() {
                             <NavLink to="/explore">Explore</NavLink>
                         </li>
                         <li className="">
-                            <NavLink to="/https://github.com/Kaungsithu-123/Foodify">
+                            <NavLink to="https://github.com/Kaungsithu-123/Foodify">
                                 <AiFillGithub />
                             </NavLink>
                         </li>
