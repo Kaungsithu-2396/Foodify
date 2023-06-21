@@ -51,7 +51,7 @@ export default function Nav() {
             </div>
 
             {toggle && (
-                <div className="absolute top-0 bg-slate-800/70 h-screen w-[50%] text-white  transistion-all duration-200 delay-300">
+                <div className="fixed top-0 bg-slate-800/70 h-[100vh] w-[50%] text-white  transistion-all duration-200 delay-300">
                     <div
                         className="absolute right-2 top-4"
                         onClick={() => setToggle(false)}
