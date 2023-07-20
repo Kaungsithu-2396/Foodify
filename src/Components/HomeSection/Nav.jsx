@@ -24,11 +24,16 @@ export default function Nav() {
                             <CiMenuFries />
                         </div>
                         <div className="cursor-pointer">
-                            <h1 className="font-black lg:text-5txl text-white  text-3xl flex justify-center">
-                                <BiSearchAlt />
-                                <span className=" text-yellow-500 "> Food</span>
-                                <span className="text-white">ify</span>
-                            </h1>
+                            <Link to="/">
+                                <h1 className="font-black lg:text-5txl text-white  text-3xl flex justify-center">
+                                    <BiSearchAlt />
+                                    <span className=" text-yellow-500 ">
+                                        {" "}
+                                        Food
+                                    </span>
+                                    <span className="text-white">ify</span>
+                                </h1>
+                            </Link>
                         </div>
                         <div className="flex justify-center items-center gap-12 ">
                             <List title={"Home"} to={"/"} />
